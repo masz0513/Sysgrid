@@ -4,7 +4,7 @@ using Sysgrid.Extensions;
 using Sysgrid.Utils;
 
 /// <summary>
-/// SYSGRID
+/// Sysgrid
 /// A system that track the position of a collection of rectangles on a grid.
 /// </summary>
 
