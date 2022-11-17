@@ -5,6 +5,12 @@ namespace Sysgrid.Extensions
 {
     public static class GridExtensions
     {
+        /// <summary>
+        /// Find and display rectangle details.
+        /// </summary>
+        /// <param name="grid"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public static void FindRectangleAndDispayDetails(this Grid grid, int x, int y)
         {
             var result = grid.Find(x, y);
@@ -21,6 +27,12 @@ namespace Sysgrid.Extensions
             Console.WriteLine("\n");
         }
 
+        /// <summary>
+        /// Remove rectangle and display its details.
+        /// </summary>
+        /// <param name="grid"></param>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         public static void RemoveRectangleAndDisplayDetails(this Grid grid, int x, int y)
         {
             var result = grid.Remove(x, y);

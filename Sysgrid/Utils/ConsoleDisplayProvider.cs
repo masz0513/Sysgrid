@@ -16,12 +16,18 @@ namespace Sysgrid.Utils
             table.Border(TableBorder.Rounded);
 
             BuildHeaders(table, width);
+            AddRows(table, rectangles, width, height);
 
+            AnsiConsole.Write(table);
+        }
+
+        private static void AddRows(Table table, IEnumerable<Rectangle> rectangles, int width, int height)
+        {
             var dataPoints = GetAllDataPoints(rectangles);
 
             for (int y = 0; y < height; y++)
             {
-                var columns = new List<string> { $"{y+1}" };
+                var columns = new List<string> { $"{y + 1}" };
 
                 for (int x = 0; x < width; x++)
                 {
@@ -34,8 +40,6 @@ namespace Sysgrid.Utils
 
                 table.AddRow(columns.ToArray());
             }
-
-            AnsiConsole.Write(table);
         }
 
         private static void DisplayRectangleDetails(IEnumerable<Rectangle> rectangles)

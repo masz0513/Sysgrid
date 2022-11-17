@@ -63,7 +63,7 @@
         /// <param name="x">X Coordinate</param>
         /// <param name="y">Y Coordinate</param>
         /// <returns>Rectangle details if found. Otherwise, null.</returns>
-        public Rectangle Find(int x, int y)
+        public Rectangle? Find(int x, int y)
             => Rectangles.FirstOrDefault(r => r.DataPoints.Any(c => c.x == x && c.y == y));
 
         /// <summary>
@@ -72,7 +72,7 @@
         /// <param name="x">X Coordinate</param>
         /// <param name="y">Y Coordinate</param>
         /// <returns>Details of the removed rectangle. Otherwise, null if not found.</returns>
-        public Rectangle Remove(int x, int y)
+        public Rectangle? Remove(int x, int y)
         {
             var rectangle = Find(x, y);
             
